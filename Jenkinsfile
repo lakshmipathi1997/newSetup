@@ -8,7 +8,7 @@ pipeline {
         }
 			stage('Tests') {
             steps {
-                bat 'mvn clean install -P %TestingType% -Dbrowser=%browser% -Dheadless=%headless% -DEnvironment=%Environment% -DTypeOS=%TypeOS%'
+                bat 'mvn clean install -P %TestingType%'
             }
         } 
 	       stage('Notification'){
