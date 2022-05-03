@@ -8,7 +8,7 @@ pipeline {
         }
 			stage('Tests') {
             steps {
-		    bat 'mvn clean install -P ${env.TestingType}'
+		    bat 'mvn clean install'
             }
         } 
 	       stage('Notification'){
