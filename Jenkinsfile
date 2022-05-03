@@ -3,12 +3,12 @@ pipeline {
     stages {
                 stage('CleanApp') {
             steps {
-                bat 'mvn clean'
+                sh 'mvn clean'
             }
         }
 			stage('Tests') {
             steps {
-		    bat 'mvn clean install'
+		    sh 'mvn clean install'
             }
         } 
 	       stage('Notification'){
@@ -20,7 +20,7 @@ pipeline {
     post {
         always {
             echo 'checking Maven Version again'
-			   bat 'mvn --version'
+			   sh 'mvn --version'
 			   echo 'Maven version has been Verified'
 			   emailext attachmentsPattern: '**/selenium-automation-report.html', from:'JenkinsAutomationReports@arexdata.com', body: 'Hi Team ,Please Find the Attachment For Failed Test Cases below', subject: 'AutomationTest', to: 'nakhter0441@gmail.com,lakshmipathi.kantipalli57@gmail.com'    			   
         }
