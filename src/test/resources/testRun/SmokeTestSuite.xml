@@ -1,0 +1,56 @@
+<suite thread-count="1" verbose="1" name="Smoke Test" annotations="JDK" parallel="tests">
+
+	<listeners>
+		<listener class-name="utility.TestNGCustomReportListener" />
+	</listeners>
+
+	<groups>
+		<run>
+			<include name="SmokeTest" />
+		</run>
+	</groups>
+
+
+   <test name="Admin Alert Test" preserve-order="true">
+		<classes>
+			<class name="tests.AdminAlertTest" />
+		</classes>
+	</test>
+
+	<test name="Application Log Test" preserve-order="true">
+		<classes>
+			<class name="tests.ApplicationLogTest" />
+		</classes>
+	</test>
+
+	<test name="Admin User Test" preserve-order="true">
+		<classes>
+			<class name="tests.Admin_UserTest" />
+		</classes>
+	</test>
+
+	<test name="Admin Manage Enpoint Test" preserve-order="true">
+		<classes>
+			<class name="tests.Admin_Manage_EndpointTest" />
+		</classes>
+	</test>
+
+	<test name="Admin Manage Settings Test" preserve-order="true">
+		<classes>
+			<class name="tests.Admin_Manage_SettingsTest" />
+		</classes>
+	</test>
+
+    <test name="Admin Data Classiffication Pattern Test" preserve-order="true">
+		<classes>
+			<class name="tests.Admin_DataClassification_PatternTest" />
+		</classes>
+	</test>
+	
+  
+	<test name="Admin Endpoint Setting Tests" preserve-order="true">
+		<classes>
+			<class name="tests.Admin_Endpoint_SettingTest" />
+		</classes>
+	</test>	
+</suite>

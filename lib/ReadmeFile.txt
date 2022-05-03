@@ -1,0 +1,1 @@
+This 'lib' folder is for jar files 
